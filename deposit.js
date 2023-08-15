@@ -22,3 +22,10 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     totalPreviousBalanceElement.innerText = totalCurrentBalance;
     
 })
+
+document.getElementById('deposit-input-field').addEventListener('keypress', function(event){
+    if(event.key === 'Enter'){
+        event.preventDefault();
+        document.getElementById('deposit-btn').click();
+    }
+})

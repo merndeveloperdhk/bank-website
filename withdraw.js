@@ -32,3 +32,11 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     totalPreviousBalanceElement.innerText = totalCurrentBalance;
 
 })
+
+// For enter button
+document.getElementById('withdraw-input-field').addEventListener('keypress', function(event){
+    if(event.key === 'Enter'){
+        event.preventDefault();
+        document.getElementById('withdraw-btn').click()
+    }
+})
